@@ -69,8 +69,8 @@ export class FileSearchPipe implements PipeTransform {
               searchString += ' ' + item.partialPath.replace(/(\/)/, ' ');
             }
           }
-
-          if (searchString.toLowerCase().indexOf(element.toLowerCase()) !== -1) {
+          const regex = new RegExp(`\\b${element.toLowerCase()}`, 'i');
+          if (regex.test(searchString.toLowerCase())) {
             matchFound++;
           }
         });
