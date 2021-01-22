@@ -276,9 +276,8 @@ export function createDotPlsFile(savePath: string, playlist: ImageElement[], sou
 export function cleanUpFileName(original: string): string {
   return original.split('.').slice(0, -1).join('.')   // (1)
                  .split('_').join(' ')                // (2)
-                 .split('-').join(' ')                // (3)
-                 .split('.').join(' ')                // (4)
-                 .split(/\s+/).join(' ')              // (5)
+                 .split('.').join(' ')                // (3)
+                 .split(/\s+/).join(' ')              // (4)
 }
 
 /**
